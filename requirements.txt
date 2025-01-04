@@ -1,8 +1,9 @@
-sagemaker
-scikit-learn
-pandas
-numpy
+sagemaker==2.237.1
+scikit-learn==1.6.0
+pandas==2.2.3
+numpy==1.26.4
 ipykernel
-matplotlib
-torch
-torchvision
+matplotlib==3.10.0
+torch==2.5.1
+torchvision==0.20.1
+s3fs==2024.12.0
