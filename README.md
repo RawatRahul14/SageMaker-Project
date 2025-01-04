@@ -1,5 +1,9 @@
-# Data Science Project using AWS SageMaker and S3
-This project demonstrates how to leverage Amazon SageMaker and Amazon S3 to build, train, and evaluate a Random Forest Classifier for mobile price classification using a dataset of mobile phone features. The dataset is stored in an S3 bucket, and model training is performed on SageMaker.
+# Data Science Projects using AWS SageMaker and S3
+**This playlist consists of 2 projects using Amazon SageMaker and Amazon S3:**
+
+The first project involves Mobile Price Classification using a Random Forest Classifier to predict mobile phone price ranges based on features, with the dataset stored in Amazon S3 and model training done on SageMaker. The second project focuses on Cat vs. Dog Image Classification using PyTorch and transfer learning, with the dataset stored in Amazon S3 and model fine-tuning performed on SageMaker.
+
+    
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -7,20 +11,19 @@ This project demonstrates how to leverage Amazon SageMaker and Amazon S3 to buil
     - [AWS CLI Installation](#aws-cli-installation)
     - [AWS Account and Permissions](#aws-account-and-permissions)
     - [AWS Configurations](#aws-configurations)
-- [Dataset](#dataset)
-- [Model Training with SageMaker](#aws-account-and-permissions)
+- [Datasets](#datasets)
+- [Model Training with SageMaker](#model-training-with-sagemaker)
 - [Running the Project](#running-the-project)
 - [Conclusion](#conclusion)
 
 ## Project Overview
-In this project, you will:
+In these projects, you will:
 
 - Set up an S3 bucket to store your dataset.
-- Use Amazon SageMaker to build and train a Random Forest Classifier model.
-- Classify mobile phones into different price ranges based on their features (such as RAM, battery life, and more).
+- Use Amazon SageMaker to build and train a Random Forest Classifier model and a Convolutional Neural Network model.
 - Evaluate the model’s performance using accuracy metrics.
 
-The primary objective is to demonstrate how cloud-based services like Amazon SageMaker and S3 can streamline the process of building, training, and deploying machine learning models.
+The primary objective is to demonstrate how cloud-based services like Amazon SageMaker and S3 can streamline the process of building, training, and deploying machine learning and deep learning models.
 
 ## Prerequisites
 ### AWS CLI Installation
@@ -53,14 +56,16 @@ To configure the AWS CLI with your credentials:
     ```
 3. Enter your AWS Access Key ID, Secret Access Key, and Region when prompted. Make sure all three are provided for successful configuration.
 
-## Dataset
-The dataset for this project consists of mobile phone features and their respective price categories. The dataset includes features such as:
+## Datasets
+- The dataset for the Machine Learning project consists of mobile phone features and their respective price categories. The dataset includes features such as:
 
-- RAM
-- Battery life
-- Screen size
-- Camera quality
-- And more…
+    - RAM
+    - Battery life
+    - Screen size
+    - Camera quality
+    - And more…
+
+- Whereas the dataset for the Deep Learning project consists total of 5000 images of cats and dogs (1000 each for training data and 500 for validation data).
 
 > Make an empty s3 bucket, where you can save this file.
 
@@ -69,8 +74,8 @@ The dataset for this project consists of mobile phone features and their respect
     - Start by creating a SageMaker instance that will be used for model training.
     - Upload the dataset from your local machine to your S3 bucket.
 
-2. Training the Random Forest Classifier:
-    - Use the Random Forest Classifier from the Scikit-learn library.
+2. Training the Models:
+    - Use the Random Forest Classifier from the Scikit-learn library and resnet50 from torchvision.models.
     - Train the model on the dataset stored in S3, and evaluate its performance.
 3. Evaluation:
     - After training, the model’s accuracy is evaluated using the test data.
@@ -80,7 +85,7 @@ The dataset for this project consists of mobile phone features and their respect
 1. Set up your AWS CLI and configure your credentials.
 2. Clonethe repository
     ```bash
-    git clone https://github.com/RawatRahul14/SageMaker-1-Project.git
+    git clone https://github.com/RawatRahul14/SageMaker-Project.git
     ```
 3. Install the packages
     ```bash
@@ -98,7 +103,7 @@ The dataset for this project consists of mobile phone features and their respect
     5. Name the role, e.g., SageMakerExecutionRole.
     6. Copy the ARN of the created role (e.g., arn:aws:iam::<account-id>:role/SageMakerExecutionRole).
 6. Launch Amazon SageMaker to start the model training process.
-7. Follow the Python script provided in the repository to interact with SageMaker and train the Random Forest Classifier.
+7. Follow the Python script provided in the repository to interact with SageMaker.
 
 ## Conclusion
-This project serves as an example of how cloud technologies like AWS SageMaker and S3 can be used for training machine learning models. By following the steps outlined in this project, you can build, train, and evaluate a machine learning model for mobile price classification.
+This project serves as an example of how cloud technologies like AWS SageMaker and S3 can be used for training machine learning and deep learning models. By following the steps outlined in this project, you can build, train, and evaluate a models on the cloud.
